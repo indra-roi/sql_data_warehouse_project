@@ -1,5 +1,6 @@
 # Snowflake Data Warehouse and Analytics Project ❄️🚀
 Welcome to the Snowflake Data Warehouse project! This repository showcases a modern, cloud-native data warehousing solution using the Medallion Architecture. It covers the end-to-end journey from raw CSV ingestion to business-ready dashboards.
+
 ---
 ## 🏗️ Data Architecture
 This project implements the Medallion Architecture to ensure data quality and reliability:
@@ -9,8 +10,9 @@ Bronze Layer: Raw data ingestion. CSV files are uploaded to Snowflake Internal S
 Silver Layer: Data cleansing and standardization. Using Snowflake Scripting (Stored Procedures), we handle deduplication, gender normalization, and date parsing (converting integer dates to DATE types).
 
 Gold Layer: The "Analytics" layer. Data is modeled into a Star Schema using optimized Views to represent Fact and Dimension tables for reporting.
+
 ---
-##📖 Project Overview
+## 📖 Project Overview
 Cloud Data Engineering: Built entirely on Snowflake, utilizing Stages, File Formats, and Stored Procedures.
 
 ETL/ELT Pipelines: Automated transformation logic to move data from Bronze to Silver.
@@ -18,6 +20,7 @@ ETL/ELT Pipelines: Automated transformation logic to move data from Bronze to Si
 Data Modeling: Implementation of a Star Schema (Fact/Dimension) in the Gold layer.
 
 Data Visualization: Integrated Snowflake Dashboards to visualize Sales Trends and Customer Behavior.
+
 ---
 ## 🛠️ Stack & Tools
 Platform: Snowflake (Free Trial Account)
@@ -31,6 +34,7 @@ Visualization: Snowflake Snowsight Dashboards
 Design: DrawIO for architecture diagrams.
 
 ---
+
 ## 📂 Repository Structure
 
 data-warehouse-project/
