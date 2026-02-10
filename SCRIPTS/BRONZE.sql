@@ -1,0 +1,49 @@
+USE DATABASE MY_PROJECT;
+USE SCHEMA BRONZE;
+
+-- 1. Product Info
+CREATE OR REPLACE TABLE CRM_PRD_INFO (
+    PRD_ID       INT,
+    PRD_KEY      VARCHAR(50),
+    PRD_NM       VARCHAR(50),
+    PRD_COST     INT,
+    PRD_LINE     VARCHAR(50),
+    PRD_START_DT TIMESTAMP_NTZ,
+    PRD_END_DT   TIMESTAMP_NTZ
+);
+
+-- 2. Sales Details
+CREATE OR REPLACE TABLE CRM_SALES_DETAILS (
+    SLS_ORD_NUM  VARCHAR(50),
+    SLS_PRD_KEY  VARCHAR(50),
+    SLS_CUST_ID  INT,
+    SLS_ORDER_DT INT,
+    SLS_SHIP_DT  INT,
+    SLS_DUE_DT   INT,
+    SLS_SALES    INT,
+    SLS_QUANTITY INT,
+    SLS_PRICE    INT
+);
+
+-- 3. ERP Location A101
+CREATE OR REPLACE TABLE ERP_LOC_A101 (
+    CID    VARCHAR(50),
+    CNTRY  VARCHAR(50)
+);
+
+-- 4. ERP Customer AZ12
+CREATE OR REPLACE TABLE ERP_CUST_AZ12 (
+    CID    VARCHAR(50),
+    BDATE  DATE,
+    GEN    VARCHAR(50)
+);
+
+-- 5. ERP Product Category
+CREATE OR REPLACE TABLE ERP_PX_CAT_G1V2 (
+    ID           VARCHAR(50),
+    CAT          VARCHAR(50),
+    SUBCAT       VARCHAR(50),
+    MAINTENANCE  VARCHAR(50)
+);
+-- Note: You don't need 'GO' in Snowflake; semicolons separate commands.
+
